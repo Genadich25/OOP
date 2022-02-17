@@ -31,5 +31,9 @@ public class Main {
         serviceStation.check(bicycle2);
         serviceStation.check(truck);
         serviceStation.check(truck2);
+
+        Bicycle testBicycle = new Bicycle("coolBicycle", 2);
+        System.out.println("Проверка: есть ли в велосипеде двигатель и прицеп ");
+        serviceStation.check(testBicycle);
     }
 }

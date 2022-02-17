@@ -1,22 +1,28 @@
 package ru.lookBag;
 
-public interface Vehicle {
+public abstract class Vehicle implements VehicleInterface {
 
-    public void updateTyre();
+    private String modelName;
+    private int wheelsCount;
 
-    public default void checkEngine() {
-        System.out.println("У данного транспорта нет двигателя");
+    public Vehicle(String modelName, int wheelsCount) {
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
     }
 
-    public default void checkTrailer() {
-        System.out.println("У данного транспорта нет двигателя");
+    public String getModelName() {
+        return modelName;
     }
 
-    public void setModelName(String steels);
+    public void setModelName(String modelName) {
+        this.modelName = modelName;
+    }
 
-    public void setWheelsCount(int wheelsCount);
+    public int getWheelsCount() {
+        return wheelsCount;
+    }
 
-    public int getWheelsCount();
-
-    public String getModelName();
+    public void setWheelsCount(int wheelsCount) {
+        this.wheelsCount = wheelsCount;
+    }
 }

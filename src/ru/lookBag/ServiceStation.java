@@ -18,6 +18,8 @@ public class ServiceStation {
             System.out.print("Колесо №" + (i + 1) + " ");
             bicycle.updateTyre();
         }
+        bicycle.checkEngine();
+        bicycle.checkTrailer();
         System.out.println();
     }
 
